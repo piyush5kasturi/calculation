@@ -1,0 +1,86 @@
+[
+  {
+    "name": "{",
+    "drop": [
+      {
+        "label": "{",
+        "value": "{",
+        "type": "operator",
+        "help_text": "",
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "name": "}",
+    "drop": [
+      {
+        "label": "}",
+        "value": "}",
+        "type": "operator",
+        "help_text": "",
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "name": "(",
+    "drop": [
+      {
+        "label": "(",
+        "value": "(",
+        "type": "operator",
+        "help_text": "",
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "name": ")",
+    "drop": [
+      {
+        "label": ")",
+        "value": ")",
+        "type": "operator",
+        "help_text": "",
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "name": "=",
+    "drop": [
+      {
+        "label": "=",
+        "value": "=",
+        "type": "operator",
+        "help_text": "",
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "name": "OR",
+    "drop": [
+      {
+        "label": "OR",
+        "value": "OR",
+        "type": "operator",
+        "help_text": "",
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "name": "AND",
+    "drop": [
+      {
+        "label": "AND",
+        "value": "AND",
+        "type": "operator",
+        "help_text": "",
+        "placeholder": ""
+      }
+    ]
+  }
+]

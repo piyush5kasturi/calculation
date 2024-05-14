@@ -1,0 +1,27 @@
+[
+  {
+    "name": "kpi",
+    "drop": [
+      {
+        "label": "Add Filter",
+        "value": "Add Filter",
+        "type": "filter_kpi",
+        "helper_text": "",
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "name": "classification",
+    "drop": [
+      {
+        "label": "Enter",
+        "value": "",
+        "type": "none",
+        "helper_text": "",
+        "placeholder": "Possible",
+        "is_editing": true
+      }
+    ]
+  }
+]
