@@ -37,12 +37,12 @@ export default function AddOperator({
     if (editData) {
       await OperatorMutation({
         autoID: editData?.autoID,
-        name,
+        labelName: name,
         value,
       });
     } else {
       await OperatorMutation({
-        name,
+        labelName: name,
         value,
       });
     }
@@ -50,7 +50,7 @@ export default function AddOperator({
 
   const setDefaultHandler = useCallback(() => {
     reset({
-      name: editData?.name,
+      name: editData?.labelName,
       value: editData?.value,
     });
   }, [editData, reset]);

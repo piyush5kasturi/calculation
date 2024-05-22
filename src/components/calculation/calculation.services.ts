@@ -1,19 +1,19 @@
 import { useMutation } from "@tanstack/react-query";
 import API from "../../lib/api-client";
 
-export const fetchListOperater = async (perPage = 10, page = 1) => {
-  const url = `/api/operator/${perPage}/${page}`;
+export const fetchList = async (perPage = 10, page = 1) => {
+  const url = `/api/DynamicQuery/${perPage}/${page}/false`;
   const response = await API("get", url);
   const result = response?.data?.result;
   return {
-    rows: result?.operatorResponses,
+    rows: result?.dynamicQueryRes,
     count: result?.totalCount,
     columns: result?.tableColumns,
   };
 };
 
-const operator = async (values: any) => {
-  const url = "/api/operator";
+const calculation = async (values: any) => {
+  const url = "/api/DynamicQuery";
   const response = await API("post", url, values);
   if (!response) {
     throw false;
@@ -21,16 +21,16 @@ const operator = async (values: any) => {
   return response.data.result;
 };
 
-export function useOperator<T extends string>() {
+export function useCalculation<T extends string>() {
   const {
-    mutate: OperatorMutation,
+    mutate: CalculationMutation,
     isLoading,
     error,
     data,
     isError,
-  } = useMutation<any, any, any, T>((values: any) => operator(values));
+  } = useMutation<any, any, any, T>((values: any) => calculation(values));
   return {
-    OperatorMutation,
+    CalculationMutation,
     isLoading,
     error: (error && error?.data) || "",
     data,
@@ -38,8 +38,8 @@ export function useOperator<T extends string>() {
   };
 }
 
-const deleteOperator = async (id) => {
-  const url = `/api/operator/${id}`;
+const deleteMaster = async (id) => {
+  const url = `/api/DynamicQuery/${id}`;
   const response = await API("delete", url);
   if (!response) {
     throw false;
@@ -54,7 +54,7 @@ export function useDelete<T extends string>() {
     error,
     data,
     isError,
-  } = useMutation<any, any, any, T>((id: any) => deleteOperator(id));
+  } = useMutation<any, any, any, T>((id: any) => deleteMaster(id));
   return {
     deleteMutation,
     isLoading,

@@ -6,7 +6,7 @@ import Ellipsis from "../../assets/ui-icons/ellipsis.svg?react";
 import EditIcon from "../../assets/ui-icons/edit.svg?react";
 import DeleteIcon from "../../assets/ui-icons/delete.svg?react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { fetchList, useDelete } from "./operator.services";
+import { fetchListOperater, useDelete } from "./operator.services";
 import { columns } from "./helper";
 import Alert from "../../ui-components/alert";
 import DropDownButton from "../../ui-components/dropdown-button";
@@ -39,7 +39,7 @@ const Operator = () => {
     refetch,
   } = useQuery<any, any, any>({
     queryKey: ["operator", "list"],
-    queryFn: () => fetchList(limit, page),
+    queryFn: () => fetchListOperater(limit, page),
     enabled: false,
   });
 

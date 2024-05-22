@@ -53,7 +53,6 @@ export default function FormulaArea({
   }, [formula, setError]);
 
   const handleFormulaUpdate = (index) => {
-    debugger;
     const tempArr = [...formula];
     tempArr.splice(index, 1);
     setFormula(tempArr);
@@ -74,7 +73,6 @@ export default function FormulaArea({
     setFormula(tempArr);
   };
   const cleanEmptyValue = () => {
-    debugger;
     setFormula(
       formula.filter((item) => {
         if (item.value) {

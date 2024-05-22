@@ -48,7 +48,7 @@ const Header = () => {
                 className={classNames(
                   "text-gray-800 hover:text-[#00D936] duration-500",
                   {
-                    "!text-[#00D936]": location.pathname.endsWith(
+                    "!text-[#00D936]": location.pathname.includes(
                       link.route === "/" ? "create" : link.route
                     ),
                   }

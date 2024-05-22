@@ -5,6 +5,7 @@ import Layout from "./components/layout";
 import Operator from "./components/operator";
 import List from "./components/list";
 import Calculation from "./components/calculation";
+import CalculationAdd from "./components/calculation/add-calculation";
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
               <Route path="master" element={<Master />} />
               <Route path="operator" element={<Operator />} />
               <Route path="calc" element={<Calculation />} />
+              <Route path="calc/edit" element={<CalculationAdd />} />
               <Route path="graph" element={<List />} />
               <Route path="*" element={<Navigate to={"/master"} />} />
             </Route>
